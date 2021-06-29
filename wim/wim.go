@@ -137,7 +137,7 @@ const (
 	hdrFlagCompressLzx
 )
 
-const supportedHdrFlags = hdrFlagRpFix | hdrFlagReadOnly | hdrFlagCompressed | hdrFlagCompressLzx
+const supportedHdrFlags = hdrFlagRpFix | hdrFlagReadOnly | hdrFlagCompressed | hdrFlagCompressLzx | hdrFlagCompressXpress
 
 type wimHeader struct {
 	ImageTag        [8]byte

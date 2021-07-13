@@ -362,7 +362,7 @@ func NewReader(f io.ReaderAt) (*Reader, error) {
 		return nil, fmt.Errorf("unsupported WIM flags %x", r.hdr.Flags&^supportedHdrFlags)
 	}
 
-	if r.hdr.CompressionSize != 0x8000 || r.hdr.CompressionSize != 0 {
+	if r.hdr.CompressionSize != 0x8000 && r.hdr.CompressionSize != 0 {
 		return nil, fmt.Errorf("unsupported compression size %d", r.hdr.CompressionSize)
 	}
 
